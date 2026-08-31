@@ -13,6 +13,9 @@ When the script is opened, three columns will be displayed, from left to right:
 2. Hit/Crit check - a list of RNs determining true hit and critical rate for the next 3 attacks. <br>
 3. Growth rate check - a list of RNs determining level-up growths after one attack. <br>
 
+<br>
+An easy way to visualize the RNs is with "cursor-dancing". By moving the cursor in a way such that the cursor path needs to be recalculated, we can use up a random number and increment the RN list. In the example below, the path should go left then down for RNs >= 50, and down then left for RNs < 50.
+
 <p align = "center">
     <img src="assets/rnburning.gif" width="300">
     <br>
