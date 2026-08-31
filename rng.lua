@@ -1,5 +1,4 @@
 memory.usememorydomain("IWRAM")
-
 local rn0_address = 0x0000  -- first rn
 local rn1_address = 0x0002  -- 1 behind first rn
 local rn2_address = 0x0004  -- 2 behind first rn
@@ -32,8 +31,8 @@ while true do
     for i = 0, 2 do
         local true_hit_rn = (rn_list[3 * i + 1] + rn_list[3 * i + 2]) / 2
         local crit = rn_list[3 * i + 3]
-        gui.text(50, 25 + i * 30, "True hit RN: " .. true_hit_rn)
-        gui.text(50, 40 + i * 30, "Crit RN: " .. crit)
+        gui.text(50, 25 + i * 30, "True hit RN: " .. true_hit_rn) -- FE6 gets hit rates based on averaging 2 RNs
+        gui.text(50, 40 + i * 30, "Crit RN: " .. crit) -- Crit rate is based on 1 RN
     end 
 
     gui.text(250, 25, "HP RN: " .. rn_list[4])
