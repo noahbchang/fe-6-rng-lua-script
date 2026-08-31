@@ -36,5 +36,13 @@ while true do
         gui.text(50, 40 + i * 30, "Crit RN: " .. crit)
     end 
 
+    gui.text(250, 25, "HP RN: " .. rn_list[4])
+    gui.text(250, 40, "Atk RN: " .. rn_list[5])
+    gui.text(250, 55, "Skl RN: " .. rn_list[6])
+    gui.text(250, 70, "Spd RN: " .. rn_list[7])
+    gui.text(250, 85, "Lck RN: " .. rn_list[10])
+    gui.text(250, 100, "Def RN: " .. rn_list[8])
+    gui.text(250, 115, "Res RN: " .. rn_list[9])
+
     emu.frameadvance()
 end
