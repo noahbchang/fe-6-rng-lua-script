@@ -18,15 +18,23 @@ while true do
     local a = rn0
     local b = rn1
     local c = rn2
+    local rn_list = {}
 
     for i = 1, 10 do
         local nxt = next_rn(a, b, c)
-        gui.text(10, 0 + i * 15, math.floor(nxt / 655)) -- division by 655 converts to proper 0-100 integer
-
+        gui.text(10, 10 + i * 15, math.floor(nxt / 655)) -- division by 655 converts to proper 0-100 integer
+        rn_list[i] = math.floor(nxt / 655)
         c = b
         b = a
         a = nxt
     end
+
+    for i = 0, 2 do
+        local true_hit_rn = (rn_list[3 * i + 1] + rn_list[3 * i + 2]) / 2
+        local crit = rn_list[3 * i + 3]
+        gui.text(50, 25 + i * 30, "True hit RN: " .. true_hit_rn)
+        gui.text(50, 40 + i * 30, "Crit RN: " .. crit)
+    end 
 
     emu.frameadvance()
 end
